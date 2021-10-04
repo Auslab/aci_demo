@@ -1,3 +1,3 @@
-data "aci_vrf" "prod" {
+data "aci_rest" "prod" {
   dn = "uni/tn-common/ctx-Prod"
 }
