@@ -169,5 +169,5 @@ module "siwapp_db" {
 }
 
 output "siwapp_vms" {
-  value = [for v in concat(module.siwapp_loadsim, module.siwapp_haproxy, module.siwapp_web, module.siwapp_app, module.siwapp_db) : v.vm]
+  value = [for v in concat(module.siwapp_haproxy, module.siwapp_web, module.siwapp_app, module.siwapp_db) : v.vm]
 }
