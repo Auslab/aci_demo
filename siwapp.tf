@@ -25,3 +25,7 @@ data "vsphere_tag_category" "owner" {
   provider = vsphere
   name     = "owner"
 }
+
+output "vms" {
+    value = module.siwapp.siwapp_vms
+}
