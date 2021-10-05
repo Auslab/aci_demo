@@ -15,12 +15,6 @@ module "siwapp" {
   ]
 }
 
-resource "vsphere_tag" "robbeck" {
-  name        = "robbeck"
-  category_id = data.vsphere_tag_category.owner.id
-  description = "Managed by Terraform"
-}
-
 data "vsphere_tag_category" "owner" {
   provider = vsphere
   name     = "owner"
