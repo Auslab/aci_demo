@@ -18,7 +18,7 @@ data "aci_l3_outside" "prod_out" {
 
 resource "aci_bridge_domain" "demo_1" {
   tenant_dn                = aci_tenant.terraform_demo.id
-#   description              = "Frontend app bd"
+  description              = "Frontend app bd"
   name                     = "bd-dev-172.19.6.0_24"
   relation_fv_rs_ctx       = data.aci_vrf.prod.id
   relation_fv_rs_bd_to_out = [data.aci_l3_outside.prod_out.id]
