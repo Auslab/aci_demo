@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    aci = {
-      source = "CiscoDevNet/aci"
-      version = "0.7.1"
+    ad = {
+      source = "hashicorp/ad"
+      version = "0.4.3"
     }
     vsphere = {
       source = "hashicorp/vsphere"
@@ -11,10 +11,6 @@ terraform {
     infoblox = {
       source = "techBeck03/infoblox"
       version = "2.0.7"
-    }
-    ad = {
-      source = "hashicorp/ad"
-      version = "0.4.3"
     }
   }
 }

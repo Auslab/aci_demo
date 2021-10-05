@@ -1,3 +1,8 @@
+data "aci_tenant" "common" {
+  name = "common"
+}
+
 data "aci_rest" "vrf_prod" {
-  dn = "uni/tn-common/ctx-Prod"
+  tenant_dn = data.aci_tenant.common.id
+  name      = "Prod"
 }
