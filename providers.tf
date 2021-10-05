@@ -19,4 +19,5 @@ provider "ad" {
 }
 
 provider "infoblox" {
+    disable_tls_verification = true
 }
