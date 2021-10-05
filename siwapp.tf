@@ -1,5 +1,5 @@
 module "siwapp" {
-  source           = "=git::https://github.com/Auslab/aci_demo.git//modules/deploy_siwapp"
+  source           = "git::https://github.com/Auslab/aci_demo.git//modules/deploy_siwapp"
   frontend_network = "wwdc-shared|user-networks|user-net-1"
   backend_network  = "wwdc-shared|user-networks|mgmt-net-1"
   frontend_subnet  = "172.18.64.0/20"
