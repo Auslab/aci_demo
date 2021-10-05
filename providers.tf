@@ -17,3 +17,6 @@ provider "ad" {
   winrm_port     = 5986
   winrm_proto    = "https"
 }
+
+provider "infoblox" {
+}
