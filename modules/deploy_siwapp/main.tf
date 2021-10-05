@@ -10,7 +10,7 @@ module "siwapp_loadsim" {
   }
   module_index = count.index
   vm = {
-    vcenter    = nonsensitive(var.vcenter_hostname)
+    vcenter    = var.vcenter_hostname
     template   = "Centos_7-Template"
     name       = "siwapp-aci-loadsim-${count.index + 1}"
     datacenter = "GeneralPurpose"
@@ -53,7 +53,7 @@ module "siwapp_haproxy" {
   }
   module_index = count.index
   vm = {
-    vcenter    = nonsensitive(var.vcenter_hostname)
+    vcenter    = var.vcenter_hostname
     template   = "Centos_7-Template"
     name       = "siwapp-aci-haproxy-${count.index + 1}"
     datacenter = "GeneralPurpose"
@@ -96,7 +96,7 @@ module "siwapp_web" {
   }
   module_index = count.index
   vm = {
-    vcenter    = nonsensitive(var.vcenter_hostname)
+    vcenter    = var.vcenter_hostname
     template   = "Centos_7-Template"
     name       = "siwapp-aci-web-${count.index + 1}"
     datacenter = "GeneralPurpose"
@@ -138,7 +138,7 @@ module "siwapp_app" {
   }
   module_index = count.index
   vm = {
-    vcenter    = nonsensitive(var.vcenter_hostname)
+    vcenter    = var.vcenter_hostname
     template   = "Centos_7-Template"
     name       = "siwapp-aci-app-${count.index + 1}"
     datacenter = "GeneralPurpose"
@@ -180,7 +180,7 @@ module "siwapp_db" {
   }
   module_index = count.index
   vm = {
-    vcenter    = nonsensitive(var.vcenter_hostname)
+    vcenter    = var.vcenter_hostname
     template   = "Centos_7-Template"
     name       = "siwapp-aci-db-${count.index + 1}"
     datacenter = "GeneralPurpose"
