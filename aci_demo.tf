@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    aci = {
-      source = "CiscoDevNet/aci"
-      version = "0.7.1"
-    }
-  }
-}
-
-provider "aci" {
-  # Configuration options
-}
-
 data "aci_tenant" "common" {
   name = "common"
 }
