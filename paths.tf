@@ -20,7 +20,7 @@ variable "aci_paths" {
 }
 
 module "vpc_static_paths" {
-  for_each = { for path in csvdecode(replace(var.aci_paths, "\\\\n", "\n")) : "${path.vpc_name}_${path.tenant_name}_${path.anp_name}_${path.epg_name}_${path.vlan_id}" => path }
+  for_each = { for path in csvdecode(var.aci_paths) : "${path.vpc_name}_${path.tenant_name}_${path.anp_name}_${path.epg_name}_${path.vlan_id}" => path }
   source   = "./modules/static_path"
 
   vpc_name    = each.value.vpc_name
