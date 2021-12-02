@@ -20,7 +20,7 @@ variable "aci_paths" {
 }
 
 output "formatted_csv" {
-  value = replace(var.aci_paths, "\\\\n", "\n")
+  value = replace(var.aci_paths, "\\n", "\n")
 }
 
 # module "vpc_static_paths" {
