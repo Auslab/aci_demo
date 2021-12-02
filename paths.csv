@@ -1,0 +1,3 @@
+vpc_name,leaf_a_id,leaf_b_id,tenant_name,anp_name,epg_name,vlan_id
+thor-fi-a,103,104,wwdc-shared,hx-thor,test,1038
+thor-fi-b,103,104,wwdc-shared,hx-thor,test,1038
